@@ -94,4 +94,8 @@ Rotas protegidas por Firebase Authentication
 
 UID do usuário armazenado com cada post
 
-Variáve
+Variáveis de ambiente protegem as chaves do Firebase
+
+---- Observações ----
+
+Este projeto foi desenvolvido como parte de um curso de React. Algumas funcionalidades foram melhoradas e customizadas para fins de aprendizado e prática.
