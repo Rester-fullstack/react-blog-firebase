@@ -1,16 +1,97 @@
-# React + Vite
+# React Blog Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto de blog desenvolvido com **React**, **Firebase Authentication** e **Cloud Firestore**, permitindo criar, editar, excluir e buscar posts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias
 
-## React Compiler
+- React (Hooks, Router, Framer Motion)  
+- Firebase (Auth, Firestore)  
+- Tailwind CSS  
+- Vite  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Registro e login de usuários  
+- Criar, editar e excluir posts  
+- Listagem de posts por data  
+- Busca de posts pelo título  
+- Dashboard do usuário  
+
+---
+
+## Configuração do Firebase
+
+1. Crie um projeto no [Firebase Console](https://console.firebase.google.com/)  
+2. Ative **Authentication → Email/Password**  
+3. Crie uma coleção chamada `posts` no **Cloud Firestore**  
+4. Configure as variáveis de ambiente em `.env`:
+
+
+VITE_FIREBASE_API_KEY=YOUR_API_KEY
+VITE_FIREBASE_AUTH_DOMAIN=YOUR_PROJECT.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+VITE_FIREBASE_STORAGE_BUCKET=YOUR_PROJECT.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID
+VITE_FIREBASE_APP_ID=YOUR_APP_ID
+
+
+---
+
+## Instalação
+
+Clone o repositório:
+
+git clone https://github.com/Rester-fullstack/react-blog-firebase.git
+cd react-blog-firebase
+
+----= Instale as dependências ----
+
+npm install
+
+---- Inicie o projeto ----
+
+npm run dev
+
+O aplicativo estará disponível em http://localhost:5173.
+
+---- Estrutura do Projeto ----
+
+src/
+├─ components/
+│  └─ Navbar.jsx
+├─ hooks/
+│  └─ useAuthentication.js
+├─ pages/
+│  ├─ CreatePost/
+│  ├─ Dashboard.jsx
+│  ├─ EditPost/
+│  ├─ Home.jsx
+│  ├─ Login.jsx
+│  ├─ Post/
+│  └─ Search/
+├─ firebase/
+│  └─ config.js
+└─ App.jsx
+
+
+---- Uso ----
+
+Login ou registro de usuário
+
+Criar, editar e excluir posts no Dashboard
+
+Listagem de posts na Home
+
+Buscar posts pelo título
+
+---- Segurança ----
+
+Rotas protegidas por Firebase Authentication
+
+UID do usuário armazenado com cada post
+
+Variáve
